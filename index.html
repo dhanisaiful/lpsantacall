@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Santa: Video Call & Chat</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B545CVBL8D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B545CVBL8D');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '491894550117050');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=491894550117050&ev=PageView&noscript=1" /></noscript>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #F64444;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .container img.icon {
+            display: block;
+            margin: 0 auto 20px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .stats img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+        }
+
+        .reviews {
+            position: relative;
+            max-width: 320px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .review-card {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        .review-card div {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .review-card div p {
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .review-card .stars {
+            color: #FFD700;
+            font-size: 1.1em;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .buttons button {
+            padding: 10px;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .buttons {
+            position: static;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            margin: 0 10px;
+            /* Tambahkan margin agar ada jarak di antara tombol */
+        }
+
+        .indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .indicator span {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .indicator .active {
+            background-color: #007bff;
+        }
+
+        .get-free-btn {
+            width: 75%;
+            font-size: 1.2em;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            background-color: #FFA500;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .container h1 {
+                font-size: 1.5em;
+            }
+
+            .stats img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .review-card div {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Icon" class="icon">
+        <h1 style="color: white;">Hello Santa: Video Call & Chat</h1>
+        <p style="color: white;">#1 Santa Video Call and Chat</p>
+        <div class="stats">
+            <img src="review.png" alt="Rating and User Trust">
+        </div>
+
+        <a href="https://apps.apple.com/us/app/hello-santa-video-call-chat/id6739553524" class="get-free-btn">Get App Now</a>
+
+        <div class="reviews">
+            <div class="review-card" id="review-card">
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Alex W. :</strong> "Magical Christmas Experience!"
+                        This app made my child's Christmas extra special! The video call looked so real, and my little one was beyond excited to talk to Santa. Highly recommended!</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Sarah L. :</strong> "Fun and Believable!"
+                        I love how realistic the calls are! My kids were so happy, and they truly believed Santa was calling them. A must-have for parents during Christmas!</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Jason K. :</strong> "Best Santa Call App!"
+                        This app is fantastic! The call felt real, and Santa’s responses were perfect. My niece was so thrilled—it made her day!</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Emily R. :</strong> "A Christmas Must-Have!"
+                        This app added so much joy to our holiday season. Seeing my daughter’s face light up when Santa called was priceless!</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Daniel M. :</strong> "Super Fun and Realistic!"
+                        My kids were in awe when Santa called them! The video quality is amazing, and the app runs smoothly without issues.</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Olivia T. :</strong> "Brings the Christmas Spirit to Life!"
+                        I was looking for a Santa call app, and this one is by far the best! The calls are very realistic, and my little one was overjoyed.</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Chris J. :</strong> "So Much Fun for Kids!"
+                        This app is perfect for parents who want to surprise their kids. Santa’s voice and video look incredibly real!</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Sophia H. :</strong> "Best Santa App Ever!"
+                        We use this every year to bring Christmas magic into our home. My kids were speechless when Santa called them!</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Michael B. :</strong> "Highly Recommended!"
+                        This app is amazing! It worked perfectly, and my kids now believe Santa is watching over them. Perfect for Christmas!
+                    </p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Lily P. :</strong> "Absolutely Magical!"
+                        This app made our Christmas so special! My child was thrilled to talk to Santa, and it felt like a real call. Totally worth it!
+                    </p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="prev()">&#8592;</button>
+                <button onclick="next()">&#8594;</button>
+            </div>
+        </div>
+
+        <div class="indicator">
+            <span class="active" onclick="goTo(0)"></span>
+            <span onclick="goTo(1)"></span>
+            <span onclick="goTo(2)"></span>
+            <span onclick="goTo(3)"></span>
+            <span onclick="goTo(4)"></span>
+            <span onclick="goTo(5)"></span>
+            <span onclick="goTo(6)"></span>
+            <span onclick="goTo(7)"></span>
+            <span onclick="goTo(8)"></span>
+            <span onclick="goTo(9)"></span>
+        </div>
+
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        let nextClickCount = 0;
+        const reviews = document.querySelectorAll('.review-card div');
+        const indicators = document.querySelectorAll('.indicator span');
+        const maxClicksBeforeRedirect = 1;
+        const redirectUrl = "https://apps.apple.com/us/app/hello-santa-video-call-chat/id6739553524";
+
+        function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function next() {
+            if (nextClickCount >= maxClicksBeforeRedirect) {
+                window.location.href = redirectUrl;
+                return;
+            }
+            if (currentIndex < reviews.length - 1) {
+                currentIndex++;
+                updateView();
+                nextClickCount++;
+            }
+        }
+
+        function prev() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateView();
+                nextClickCount = Math.max(nextClickCount - 1, 0);  // Reset counter if user goes back
+            }
+        }
+
+        function goTo(index) {
+            if (index >= 0 && index < reviews.length) {
+                currentIndex = index;
+                updateView();
+                nextClickCount = 0;  // Reset counter if user jumps directly to a specific review
+            }
+        }
+
+        function updateView() {
+            const reviewCard = document.getElementById('review-card');
+            reviewCard.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateIndicators();
+        }
+    </script>
+
+</body>
+
+</html>
